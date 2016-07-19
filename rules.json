@@ -1,0 +1,31 @@
+{
+  "rules": {
+    // Только зареганные имеют доступ
+    "collection": {
+        ".write": "auth != null",
+        ".read": "auth != null"
+    },
+    // Все имеют доступ
+    "users": {
+        ".write": true,
+        ".read": true
+    }
+  }
+}
+
+
+ {
+  "rules": {
+    "collection": {
+        ".write": true,
+        ".read": true
+    },
+    // тут с проверка на авторизацию каждый юзер видит свою запись
+    "users": {
+        "$uid": {
+          ".write": true,
+        ".read": "$uid === auth.uid"
+      }
+    }
+  }
+}

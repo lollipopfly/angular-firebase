@@ -5,15 +5,38 @@
     <title>Angular + Firebase Registration/Auth Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-cookies.js"></script>
+
     <script src='node_modules/angular-route/angular-route.min.js'></script>
+    <!-- Firebase -->
+   <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDnI31WxoB0p9izJvoxS_sUXrvlXCMMR_U",
+        authDomain: "angularfirebase-1f1c2.firebaseapp.com",
+        databaseURL: "https://angularfirebase-1f1c2.firebaseio.com",
+        storageBucket: "angularfirebase-1f1c2.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+    <script>
+        (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+    </script>
 </head>
 <body>
-<div ng-view ="" class="container">
+    <div ng-view ="" class="container"></div>
 
-</div>
-<a href="registration/">Registration</a>
-<a href="auth/">Auth</a>
-<script src='js/app.js'></script>
-<script src='js/controllers/registerCtrl.js'></script>
+    <script src='js/app.js'></script>
+    <script src='js/controllers/registerCtrl.js'></script>
+    <script src='js/controllers/authCtrl.js'></script>
 </body>
 </html>

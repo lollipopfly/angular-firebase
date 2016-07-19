@@ -1,0 +1,45 @@
+{
+    "users": [
+        {
+            "name": "Timur",
+            "email": "lollipop.fly@gmail.com"
+        },
+        {
+            "name": "Anton",
+            "email": "email@mail.com"
+        }
+    ],
+    "collection": {
+        "id": "5048fde7c4aa917cbd4d8e13",
+        "websiteId": "50295e80e4b096e761d7e4d3",
+        "enabled": true,
+        "starred": false,
+        "type": 1,
+        "ordering": 2,
+        "title": "Blog",
+        "navigationTitle": "Blog",
+        "urlId": "blog",
+        "itemCount": 2,
+        "updatedOn": 1454432700858,
+        "pageSize": 20,
+        "folder": false,
+        "dropdown": false,
+        "tags": [
+            "tag1",
+            "pizza",
+            "coffee",
+            "snacks",
+            "tag2"
+        ],
+        "categories": [
+            "category1",
+            "category2"
+        ],
+        "homepage": false,
+        "typeName": "blog",
+        "synchronizing": false,
+        "fullUrl": "/blog/",
+        "passwordProtected": false,
+        "typeLabel": "blog"
+    }
+}

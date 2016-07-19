@@ -1,6 +1,85 @@
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="row">
+        <div class="col-md-12">
+            <h1>Auth</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" ng-model="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" id="password" ng-model="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <a href="#/register">Registration</a>
+                </div>
+                <div class="form-group">
+                    <input type="button"  class="btn btn-primary" ng-click="submit()" value="Login">
+                </div>
+            </form>
+            <div ng-if="errorMessage" class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Users</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="" class="btn btn-primary" ng-click="facebook()">Facebook</a>
+            <a href="" class="btn btn-primary" ng-click="getFacebookInfo()">Get facebook info</a>
+            <a href="" class="btn btn-danger" ng-click="logOut()">Logout</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Data</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="" class="btn btn-primary" ng-click="getUsers()">Get users data</a>
+            <a href="" class="btn btn-primary" ng-click="getData()">Get data</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Add data to Users json</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" ng-model="userName">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" ng-model="userEmail">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" ng-click="setUser()">Add (overwrite)</button>
+                <button class="btn btn-primary" ng-click="pushUser()">Push new</button>
+                <button class="btn btn-primary" ng-click="updateUser()">Update user</button>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <ul>
+                <li ng-if="user.name" ng-repeat="user in users">{{ user.name }} - {{ user.email }}
+                    <button class="btn btn-primary" ng-click="updateUser(user)">Update User</button>
+                    <button class="btn btn-danger" ng-click="deleteUser(user)">Delete User</button>
+                </li>
+            </ul>
+        </div>
+    </div>
